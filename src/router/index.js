@@ -26,6 +26,9 @@ export default new Router({
       path: '/chuancan/:newid/:topic',
       name: 'chuancan',
       component: ChuancanUrl
+    },{
+      path: '/goparams/:newid/:topic',
+      redirect: '/chuancan/:newid/:topic'
     }
     
   ]

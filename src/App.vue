@@ -5,6 +5,7 @@
       <router-link to="/">hello啊sir</router-link>|
       <router-link to="/hi">hi啥子hi啊</router-link>|
       <router-link to="/chuancan/123456/哈哈">url传个参数看看</router-link>
+      <router-link to="/goparams/33333/love">url传个参数看看</router-link>
       
     </p>
     <router-view></router-view>
