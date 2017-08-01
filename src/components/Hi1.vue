@@ -1,6 +1,7 @@
 <template>
   <div class="hi">
     {{msg}}-{{$route.params.key}}
+    <button @click="goHome">回到首页</button>
   </div>
 </template>
 
@@ -10,6 +11,14 @@ export default {
   data () {
     return {
       msg: '我是hi1啦'
+    }
+  },
+  methods:{
+    goback(){
+      this.$router.go(-1);
+    },
+    goHome(){
+      this.$router.push('/');
     }
   }
 }

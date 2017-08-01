@@ -1,7 +1,10 @@
 <template>
   <div class="hi">
     {{msg}}
+    	
+    <button @click="goback">后退</button>
   </div>
+  
 </template>
 
 <script>
@@ -10,6 +13,11 @@ export default {
   data () {
     return {
       msg: '我系hi2啦'
+    }
+  },
+  methods:{
+    goback(){
+      this.$router.go(-1);
     }
   }
 }

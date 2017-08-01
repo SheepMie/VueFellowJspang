@@ -29,6 +29,10 @@ export default new Router({
     },{
       path: '/goparams/:newid/:topic',
       redirect: '/chuancan/:newid/:topic'
+    },{
+      path: '/hi',
+      component: Hi,
+      alias:'/home'
     }
     
   ]
