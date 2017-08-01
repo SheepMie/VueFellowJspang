@@ -34,7 +34,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
     "plugins": ["html"]
  }
 ```
-### ==注意所有的install最好用cmd的不要用bash==
+### == 注意所有的install最好用cmd的不要用bash ==
 > ### vue-cli
 
 ---
@@ -351,7 +351,7 @@ router index
 ```
 这样就回到原来的页面还带上了参数啦
 
-==上面那个是改变了url的 ，还有可以不改变url的路径，就是将path加一个别名==
+== 上面那个是改变了url的 ，还有可以不改变url的路径，就是将path加一个别名 ==
 ```
 router index
 
@@ -448,4 +448,38 @@ export default {
   }
 }
 </script>
+```
+##  前进后退必须有啊，还有指定跳转
+this.$router.go(-1) 和 this.$router.go(1)
+```
+<button @click="goback">后退</button>
+```
+```
+<script>
+export default {
+  name: 'app',
+  methods:{
+    goback(){
+      this.$router.go(-1);
+    }
+  }
+}
+</script>
+```
+跳转指定页面this.$router.push(‘/xxx ‘)
+```
+<button @click="goHome">回到首页</button>
+```
+```
+export default {
+  name: 'app',
+  methods:{
+    goback(){
+      this.$router.go(-1);
+    },
+    goHome(){
+      this.$router.push('/');
+    }
+  }
+}
 ```
